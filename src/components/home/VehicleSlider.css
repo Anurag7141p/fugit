@@ -1,0 +1,8 @@
+.slider-image {
+  width: 100%; /* Adjust the width as needed */
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+.tiny-slider-inner {
+  gap: 30px;
+}

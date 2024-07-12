@@ -1,0 +1,108 @@
+// Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
+
+// Note for dark mode:
+// Uncomment below code and change primary color code to set different primary(i.e. light color of your primary) color in dark mode only.
+
+/*User CSS*/
+
+// [data-bs-theme="dark"] {
+//   --bs-primary: #2ac5f5 !important;
+//   --bs-primary-rgb: 42, 197, 245 !important; 
+//   --bs-link-hover-color:#067799 !important;
+//   --bs-link-color:#2ac5f5;
+//   --bs-link-color-rgb: 42, 197, 245 !important;
+//   --bs-link-hover-color-rgb: 6, 119, 153 !important;
+//   }
+
+html, body{
+    overflow-x: hidden;
+}
+
+
+.h-400px{
+    height: 400px !important;
+}
+
+@media (min-width:576px) {
+    .h-sm-600px{
+        height: 600px !important;
+    }
+}
+
+.opacity-3 {
+    opacity: 0.3 !important;
+}
+
+.page-loading{
+    display: none;
+}
+.page-loading.active{
+    display: block;
+    background-color: var(--bs-body-bg);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9909;
+    .page-loading-inner{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+.loader {
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    background: currentColor;
+    color: $primary;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background: currentColor;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    animation: animloader1 0.3s  0.45s  linear infinite alternate;
+  }
+  .loader::before {
+    left: -20px;
+    animation-delay: 0s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      height: 40px;
+      transform: translateY(0);
+    }
+    100% {
+      height: 10px;
+      transform: translateY(30px);
+    }
+  }
+  
+  @keyframes animloader1 {
+    0% {
+      height: 48px;
+    }
+    100% {
+      height: 4.8px;
+    }
+  }
+      

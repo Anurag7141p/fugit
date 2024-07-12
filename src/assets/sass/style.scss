@@ -1,0 +1,47 @@
+// @import "variables";
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import "variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/bootstrap-icons/font/bootstrap-icons";
+
+
+@import "./components/avatar";
+@import "./components/form-guest";
+@import "./components/general";
+@import "./components/navbar-mobile";
+@import "./components/sidebar-admin";
+@import "./components/utilities";
+
+@import "./components/vendor/animate.scss";
+@import "./components/vendor/choices";
+@import "./components/vendor/dropzone";
+@import "./components/vendor/flatpickr";
+@import "./components/vendor/nouislider";
+@import "./components/vendor//quill";
+@import "./components/vendor/splide-slider";
+@import "components/vendor/stepper";
+@import "components/vendor/tiny-slider";
+
+@import "./custom/accordion";
+@import "./custom/badge";
+@import "./custom/breadcrumb";
+@import "./custom/buttons";
+@import "./custom/card";
+@import "./custom/dropdowns";
+@import "./custom/list-group";
+@import "./custom/nav";
+@import "./custom/navbar";
+@import "./custom/offcanvas";
+@import "./custom/pagination";
+@import "./custom/progress";
+@import "./custom/reboot";
+@import "./custom/tables";
+@import "./custom/type";
+@import "./custom/forms/form-check";
+@import "./custom/forms/form-control";
+
+
+@import "./dark-mode";
+@import "./user"
