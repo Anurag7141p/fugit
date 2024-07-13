@@ -1,0 +1,78 @@
+/* room */
+
+.input-group {
+    margin-top: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.travelers-dropdown {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: var(--bs-body-bg);
+  top: 50px;
+  min-width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 10px !important;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.room {
+  padding: 10px 0;
+}
+
+.room:last-child {
+  border-bottom: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.controls label {
+  flex: 1;
+}
+
+.controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.controls .value {
+  width: 30px;
+  text-align: center;
+}
+
+.child-ages select {
+  margin: 5px 0;
+  width: 100%;
+  padding: 5px;
+}
+
+.add-room,
+.remove-room {
+  background: none;
+  border: none;
+  width: 50%;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.done {
+  border: none;
+  background: none;
+  width: 50%;
+  font-size: 17px;
+  font-weight: 500;
+}

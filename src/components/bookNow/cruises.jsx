@@ -7,7 +7,7 @@ import "primeicons/primeicons.css"; // PrimeIcons CSS
 import "primeflex/primeflex.css"; // PrimeFlex CSS (Optional)
 import Travalers from "./travalers";
 
-const Stays = () => {
+const Cruises = () => {
   const [date, setDate] = useState(null);
 
   const handleDateChange = (e) => {
@@ -42,26 +42,34 @@ const Stays = () => {
               selectionMode="range"
               numberOfMonths={2}
               className="date_picker"
-              placeholder="07/10/2024 - 08/11/2024"
+              placeholder="Departure Between"
             ></Calendar>
           </div>
         </div>
 
         <div className="input-group">
-          <Travalers/>
+          <Travalers />
+        </div>
+        <div className="input-group">
+          <div className="location-field">
+            <i
+              className="fa-solid fa-clock"
+              aria-hidden="true"
+              style={{ fontSize: "24px" }}
+            ></i>
+            <input
+              type="text"
+              className="destination"
+              id="destination1"
+              name="destination"
+              placeholder="Duration"
+            />
+          </div>
         </div>
         <button className="search-button">Search</button>
-      </div>
-      <div className="options">
-        <label>
-          <input type="checkbox" /> Add a flight
-        </label>
-        <label>
-          <input type="checkbox" /> Add a car
-        </label>
       </div>
     </div>
   );
 };
 
-export default Stays;
+export default Cruises;

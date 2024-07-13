@@ -5,9 +5,8 @@ import "primereact/resources/themes/saga-blue/theme.css"; // Choose a theme you 
 import "primereact/resources/primereact.min.css"; // Core PrimeReact CSS
 import "primeicons/primeicons.css"; // PrimeIcons CSS
 import "primeflex/primeflex.css"; // PrimeFlex CSS (Optional)
-import Travalers from "./travalers";
 
-const Stays = () => {
+const ThingsToDo = () => {
   const [date, setDate] = useState(null);
 
   const handleDateChange = (e) => {
@@ -24,7 +23,7 @@ const Stays = () => {
               className="destination"
               id="destination1"
               name="destination"
-              placeholder="Where to?"
+              placeholder="Going to?"
             />
           </div>
         </div>
@@ -42,26 +41,15 @@ const Stays = () => {
               selectionMode="range"
               numberOfMonths={2}
               className="date_picker"
-              placeholder="07/10/2024 - 08/11/2024"
+              placeholder="Dates"
             ></Calendar>
           </div>
         </div>
 
-        <div className="input-group">
-          <Travalers/>
-        </div>
         <button className="search-button">Search</button>
-      </div>
-      <div className="options">
-        <label>
-          <input type="checkbox" /> Add a flight
-        </label>
-        <label>
-          <input type="checkbox" /> Add a car
-        </label>
       </div>
     </div>
   );
 };
 
-export default Stays;
+export default ThingsToDo;
