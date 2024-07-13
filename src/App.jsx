@@ -12,6 +12,7 @@ import CarRental from "./pages/carRental";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import Services from "./pages/services";
+import BookNow from "./pages/bookNow";
 // import './App.css'
 
 function App() {
@@ -27,8 +28,10 @@ function App() {
         <Route path="/tours-and-travels" element={<ToursAndTravels />} />
         <Route path="/manpower-consulting" element={<ManpowerConsulting />} />
         <Route path="/e-catering" element={<ECatering />} />
+
         <Route path="/corporate-gifts" element={<CorporateGifts />} />
         <Route path="/organic-products" element={<OrganicProducts />} />
+        <Route path="/book-now" element={<BookNow />} />
         {/* <Route path="/book-now" element={<Contact />} />
 
           <Route path="*" element={<NoPage />} /> */}

@@ -1,0 +1,121 @@
+.tabs-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.main_tab {
+  border-bottom: 1px solid gainsboro;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid #6200ea;
+  color: #6200ea;
+}
+
+.flight-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* padding-left: 15px; */
+}
+
+.flight-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.flight_tab {
+  padding-top: 15px;
+}
+
+.flight-type-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.flight-type-tabs button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: none;
+  cursor: pointer;
+}
+
+.flight-type-tabs button.active {
+  background: #6200ea;
+  color: #fff;
+}
+
+.class-type {
+  display: flex;
+  gap: 10px;
+}
+
+.class-dropdown {
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.search-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  gap: 10px;
+  border: 1px solid #ddd;
+
+}
+
+.field input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+}
+
+.search-button {
+  padding: 10px 20px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.additional-options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}

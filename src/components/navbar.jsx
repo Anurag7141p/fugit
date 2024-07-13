@@ -103,9 +103,9 @@ const Navbar = () => {
           <div className="navbar-collapse collapse" id="navbarCategoryCollapse">
             <ul className="navbar-nav navbar-nav-scroll nav-pills-primary-soft text-center ms-auto p-2 p-xl-0">
               <li className="nav-item">
-                <a className="nav-link active" href="book-now.html">
+                <Link className="nav-link active" to="/book-now">
                   <b>Book Now</b>
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown mt-1 ms-4">
                 <button
