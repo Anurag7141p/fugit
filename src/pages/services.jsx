@@ -109,12 +109,12 @@ const Services = () => {
     },
   ];
 
-  const head = "Explore Our Other Services";
+  // const head = "Explore Our Other Services";
 
   return (
     <div>
       <OurServices ourServices={ourServices} />
-      <ServicesSection cardData={cardData} head={head} />
+      <ServicesSection cardData={cardData} />
       <div className="pt-0 py-lg-5">
         <div className="container pb-lg-5">
           <div className="row g-4 pt-5">

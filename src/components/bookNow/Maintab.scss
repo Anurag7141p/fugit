@@ -5,7 +5,7 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--bs-body-bg);
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -82,7 +82,7 @@
   // border: 1px solid #ddd;
   border-radius: 30px;
   cursor: pointer;
-  background: #fff;
+  background: var(--bs-body-bg);
   // border-radius: 5px;
   font-size: smaller;
   padding-inline: 10px;
@@ -151,7 +151,7 @@
 .location-field i {
   font-size: 30px;
   padding-right: 3px;
-  color: var(--bs-heading-color);
+  color: var(--bs-gray-400);
 }
 
 .location-field > input {
@@ -332,7 +332,7 @@
 .car_bottom_btn {
   margin-top: 15px;
   button {
-    background-color: white;
+    background-color: var(--bs-body-bg);
     font-size: 12px;
     padding: 9px;
     border-radius: 20px;
@@ -345,7 +345,7 @@
   padding: 18px;
   gap: 20px;
   button {
-    background-color: white;
+    background-color: var(--bs-body-bg);
     border-radius: 20px;
     font-size: smaller;
     &:hover {
@@ -359,12 +359,15 @@
   padding: 18px;
   gap: 20px;
   button {
-    background-color: white;
+    background-color: var(--bs-body-bg);
     border-radius: 20px;
     font-size: smaller;
     &:hover {
       background-color: #d9ecee;
     }
-    border: 1px solid gray;
   }
+}
+
+.controls button {
+  background-color: var(--bs-body-bg) !important;
 }

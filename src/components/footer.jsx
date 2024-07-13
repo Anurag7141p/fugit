@@ -1,7 +1,16 @@
 import React from "react";
 import logoLight from "../assets/img/logo-light.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Smooth scroll behavior
+    });
+  };
+
   return (
     <>
       <footer className="bg-dark pt-5">
@@ -11,7 +20,7 @@ const Footer = () => {
             {/* Widget 1 START */}
             <div className="col-lg-5 pe-5">
               {/* logo */}
-              <a href="index.html">
+              <Link href="/">
                 <h4 className="d-flex">
                   <img
                     style={{ width: "20px", marginRight: "10px" }}
@@ -20,13 +29,13 @@ const Footer = () => {
                   />
                   <span className="text-white">Fugit</span>
                 </h4>
-              </a>
+              </Link>
               <p className="my-3 text-body-secondary">
                 At Fugit, our approach is defined by friendliness, adaptability, and
                 a keen understanding of our customers' needs.
               </p>
               <p className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="text-body-secondary text-primary-hover d-flex"
                 >
@@ -34,10 +43,10 @@ const Footer = () => {
                     phone_in_talk
                   </span>
                   +91 9972519906 / +91 9686018281
-                </a>
+                </Link>
               </p>
               <p className="mb-0">
-                <a
+                <Link
                   href="#"
                   className="text-body-secondary d-flex text-primary-hover"
                 >
@@ -45,7 +54,7 @@ const Footer = () => {
                     mail
                   </span>
                   support@fugit.in
-                </a>
+                </Link>
               </p>
             </div>
             {/* Widget 1 END */}
@@ -58,35 +67,41 @@ const Footer = () => {
                   <h5 className="text-white mb-2 mb-md-4">Page</h5>
                   <ul className="nav flex-column text-primary-hover">
                     <li className="nav-item">
-                      <a className="nav-link text-body-secondary" href="/">
+                      <Link
+                        className="nav-link text-body-secondary"
+                        to="/"
+                        onClick={scrollToTop} // Scroll to top when clicked
+                      >
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link text-body-secondary"
-                        href="about-us.html"
+                        to="/about-us"
+                        onClick={scrollToTop} // Scroll to top when clicked
                       >
                         About us
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link text-body-secondary"
-                        href="contact-us.html"
+                        to="/contact-us"
+                        onClick={scrollToTop} // Scroll to top when clicked
                       >
                         Contact us
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link text-body-secondary"
-                        href="services.html"
+                        to="/services"
+                        onClick={scrollToTop} // Scroll to top when clicked
                       >
                         Services
-                      </a>
+                      </Link>
                     </li>
-                    {/* <li className="nav-item"><a className="nav-link text-body-secondary" href="faq.html">Faq</a></li> */}
                   </ul>
                 </div>
 
@@ -95,14 +110,22 @@ const Footer = () => {
                   <h5 className="text-white mb-2 mb-md-4">Link</h5>
                   <ul className="nav flex-column text-primary-hover">
                     <li className="nav-item">
-                      <a className="nav-link text-body-secondary" href="#">
+                      <Link
+                        className="nav-link text-body-secondary"
+                        href="/"
+                        onClick={scrollToTop} // Scroll to top when clicked
+                      >
                         Privacy policy
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link text-body-secondary" href="#">
+                      <Link
+                        className="nav-link text-body-secondary"
+                        href="/"
+                        onClick={scrollToTop} // Scroll to top when clicked
+                      >
                         Terms and conditions
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import logoDark from "../assets/img/logo-dark.svg";
 import logoLight from "../assets/img/logo-light.svg";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Collapse } from "bootstrap";
 
 const Navbar = () => {
+  const navbarCollapseRef = useRef(null);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "auto");
+
+  const toggleNavbar = () => {
+    const collapseInstance = new Collapse(navbarCollapseRef.current);
+    collapseInstance.toggle();
+  };
+
+  const applyTheme = (themeValue) => {
+    document.documentElement.setAttribute("data-bs-theme", themeValue);
+    localStorage.setItem("theme", themeValue);
+    setTheme(themeValue);
+  };
+
+  useEffect(() => {
+    applyTheme(theme);
+  }, []);
+
+  const handleThemeChange = (event) => {
+    const selectedTheme = event.target.getAttribute("data-bs-theme-value");
+    applyTheme(selectedTheme);
+  };
+
   return (
     <header className="navbar-light header-sticky">
       <nav className="navbar navbar-expand-xl">
@@ -28,8 +52,7 @@ const Navbar = () => {
           <button
             className="navbar-toggler ms-auto ms-sm-0 p-0 p-sm-2"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
+            onClick={toggleNavbar}
             aria-controls="navbarCollapse"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -42,60 +65,100 @@ const Navbar = () => {
             <span className="d-none d-sm-inline-block small">Menu</span>
           </button>
 
-          <div className="navbar-collapse collapse" id="navbarCollapse">
+          <div
+            className="navbar-collapse collapse"
+            id="navbarCollapse"
+            ref={navbarCollapseRef}
+          >
             <ul className="navbar-nav navbar-nav-scroll nav-pills-primary-soft text-center ms-auto p-2 p-xl-0">
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
+                <NavLink className="nav-link" to="/" exact activeClassName="active">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about-us">
+                <NavLink
+                  className="nav-link"
+                  to="/about-us"
+                  activeClassName="active"
+                >
                   About Us
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
-                <Link className="nav-link d-flex" to="/services">
+                <NavLink
+                  className="nav-link d-flex"
+                  to="/services"
+                  activeClassName="active"
+                >
                   Services
                   <span className="material-symbols-outlined">expand_more</span>
-                </Link>
+                </NavLink>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/premium-car-rental">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/premium-car-rental"
+                      activeClassName="active"
+                    >
                       Premium Car Rental
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/tours-and-travels">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/tours-and-travels"
+                      activeClassName="active"
+                    >
                       Tours and Travels
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/manpower-consulting">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/manpower-consulting"
+                      activeClassName="active"
+                    >
                       Manpower Consulting
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/e-catering">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/e-catering"
+                      activeClassName="active"
+                    >
                       E-Catering
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/corporate-gifts">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/corporate-gifts"
+                      activeClassName="active"
+                    >
                       Corporate Gifts
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/organic-products">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/organic-products"
+                      activeClassName="active"
+                    >
                       Organic Products
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact-us">
+                <NavLink
+                  className="nav-link"
+                  to="/contact-us"
+                  activeClassName="active"
+                >
                   Contact Us
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -103,9 +166,9 @@ const Navbar = () => {
           <div className="navbar-collapse collapse" id="navbarCategoryCollapse">
             <ul className="navbar-nav navbar-nav-scroll nav-pills-primary-soft text-center ms-auto p-2 p-xl-0">
               <li className="nav-item">
-                <Link className="nav-link active" to="/book-now">
+                <NavLink className="nav-link active" to="/book-now">
                   <b>Book Now</b>
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item dropdown mt-1 ms-4">
                 <button
@@ -137,6 +200,7 @@ const Navbar = () => {
                       type="button"
                       className="dropdown-item d-flex align-items-center"
                       data-bs-theme-value="light"
+                      onClick={handleThemeChange}
                     >
                       <svg
                         width="16"
@@ -155,6 +219,7 @@ const Navbar = () => {
                       type="button"
                       className="dropdown-item d-flex align-items-center"
                       data-bs-theme-value="dark"
+                      onClick={handleThemeChange}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -173,8 +238,9 @@ const Navbar = () => {
                   <li>
                     <button
                       type="button"
-                      className="dropdown-item d-flex align-items-center active"
+                      className="dropdown-item d-flex align-items-center"
                       data-bs-theme-value="auto"
+                      onClick={handleThemeChange}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
