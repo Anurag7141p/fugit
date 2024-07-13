@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaPlane, FaBed, FaCar, FaGift, FaTasks, FaShip } from "react-icons/fa";
 
-import "react-datepicker/dist/react-datepicker.css";
 import "./Maintab.scss"; // Include your custom CSS here
 import Stays from "./stays";
 import Flights from "./flights";

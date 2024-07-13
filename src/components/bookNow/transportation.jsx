@@ -1,19 +1,9 @@
 import React, { useState } from "react";
-import { Calendar } from "primereact/calendar";
-// Import PrimeReact CSS
-import "primereact/resources/themes/saga-blue/theme.css"; // Choose a theme you prefer
-import "primereact/resources/primereact.min.css"; // Core PrimeReact CSS
-import "primeicons/primeicons.css"; // PrimeIcons CSS
-import "primeflex/primeflex.css"; // PrimeFlex CSS (Optional)
 import Travalers from "./travalers";
 
 const Transportation = () => {
   const [flightType, setFlightType] = useState("AirportToHotel");
-  const [date, setDate] = useState(null);
 
-  const handleDateChange = (e) => {
-    setDate(e.value);
-  };
   return (
     <div className="flight-tab-content">
       <div className="flight-controls">
@@ -75,7 +65,7 @@ const Transportation = () => {
           </div>
           <div className="search-box" id="search-box">
             <div className="input-group">
-              <Travalers />
+              <Travalers/>
             </div>
             <div className="input-group">
               <div className="location-field">
@@ -84,14 +74,13 @@ const Transportation = () => {
                   aria-hidden="true"
                   style={{ fontSize: "24px" }}
                 ></i>
-                <Calendar
-                  value={date}
-                  onChange={handleDateChange}
-                  selectionMode="range"
-                  numberOfMonths={2}
-                  className="date_picker"
-                  placeholder="Flight Arrival Date"
-                ></Calendar>
+                <input
+                  type="text"
+                  className="destination"
+                  id="destination1"
+                  name="destination"
+                  placeholder="Date"
+                />
               </div>
             </div>
             <div className="input-group">
@@ -168,14 +157,13 @@ const Transportation = () => {
                   aria-hidden="true"
                   style={{ fontSize: "24px" }}
                 ></i>
-                <Calendar
-                  value={date}
-                  onChange={handleDateChange}
-                  selectionMode="range"
-                  numberOfMonths={2}
-                  className="date_picker"
-                  placeholder="Flight Arrival Date"
-                ></Calendar>
+                <input
+                  type="text"
+                  className="destination"
+                  id="destination1"
+                  name="destination"
+                  placeholder="Date"
+                />
               </div>
             </div>
           </div>
@@ -219,7 +207,7 @@ const Transportation = () => {
           </div>
           <div className="search-box" id="search-box">
             <div className="input-group">
-              <Travalers />
+              <Travalers/>
             </div>
 
             <div className="input-group">
@@ -229,14 +217,13 @@ const Transportation = () => {
                   aria-hidden="true"
                   style={{ fontSize: "24px" }}
                 ></i>
-                <Calendar
-                  value={date}
-                  onChange={handleDateChange}
-                  selectionMode="range"
-                  numberOfMonths={2}
-                  className="date_picker"
-                  placeholder="Flight Arrival Date"
-                ></Calendar>
+                <input
+                  type="text"
+                  className="destination"
+                  id="destination1"
+                  name="destination"
+                  placeholder="Date"
+                />
               </div>
             </div>
           </div>

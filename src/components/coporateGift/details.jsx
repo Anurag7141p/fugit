@@ -2,7 +2,7 @@ import React from "react";
 
 const Details = () => {
   return (
-    <section className="pt-0 py-lg-5">
+    <section className="pt-10 py-lg-5">
       <div className="container">
         {/* Content START */}
         <div className="row">

@@ -15,7 +15,7 @@ const Home = () => {
       description:
         "Discover unparalleled premium car rental services tailored to cater to the distinct needs of our esteemed corporate clients, tour operators, and event management professionals.",
       link: "premium-car-rental.html",
-      color: "primary",
+      color: "",
       background_color: "bg-white",
     },
     {
